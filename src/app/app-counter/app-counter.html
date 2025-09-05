@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Counter</title>
+    <link rel="stylesheet" href="app-counter.css">
+    <style>
+        #inputtext{
+            background-color: lightcoral;
+            font-size: 45px;
+            width: 100px;
+            height: 50px;
+             border-radius: 20px;
+             margin-bottom: 30px;
+             margin-left: 100px;
+        }
+        .input_Btn{
+padding:10px;
+margin-right: 10px;
+border-radius: 10px;
+
+        }
+        #decrement:hover{
+            background-color: lightgreen;
+        }
+        #Increment:hover{
+            background-color: lightgrey;
+        }
+        #Reset:hover{
+            background-color: lightpink;
+        }
+    </style>
+</head>
+<body>
+   
+    <main>
+        <div id="inputtext">{{count}}</div>
+        <div class="Btn_Group">
+          <input id ="decrement" class="input_Btn"  type="button" value="Decrement " (click)="Decre_Count()">
+          <input id ="Reset" class="input_Btn" type="button" value="Reset " (click)="reset_count()">
+          <input id ="Increment" class="input_Btn" type="button" value="Increment " (click)="Incre_Count()">
+       
+        </div><br><br>
+        <h1> text is :{{displayMsg}}</h1>
+        <input type="text" placeholder="Enter the Data" (input)="getName($event)"><br><br>
+<button (click)="showName()">Get Value</button>
+        
+    </main>
+    <footer></footer>
+</body>
+</html>
